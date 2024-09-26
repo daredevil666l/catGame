@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cat Coin Clicker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Cat Coin Clicker</h1>
+        <div class="rewards">
+          <button class="reward-btn">Daily Reward</button>
+          <button class="reward-btn">Daily Offer</button>
+          <button class="reward-btn">Daily Combo</button>
+        </div>
+      </header>
+      <main>
+        <div class="profile">
+          <div class="coin-container">
+            <img src="coin.png" class="coin" alt="Coin" />
+            <img src="cat.png" class="cat" alt="Cat" id="catImage" />
+          </div>
+          <div class="score-container">Coins: <span id="score">0</span></div>
+        </div>
+      </main>
+      <footer>
+        <nav>
+          <button class="nav-button" id="shopBtn">Open Shop</button>
+
+          <button class="nav-button disabled">Exchange</button>
+          <button class="nav-button disabled">Friends</button>
+          <button class="nav-button disabled">Airdrop</button>
+        </nav>
+      </footer>
+    </div>
+
+    <!-- Добавляем модальное окно магазина -->
+    <div class="shop-modal" id="shopModal">
+      <div class="shop-content">
+        <h2>Shop</h2>
+        <button class="close-btn" id="closeBtn">&times;</button>
+        <div class="upgrade-list">
+          <div class="upgrade-item" data-cost="10" data-value="1">
+            <img src="leaf.png" alt="Листик" class="item-image" />
+            <!-- Изображение для Листика -->
+            <span>Листик (+1 coin/click)</span>
+            <button class="buy-btn">Buy (10 coins)</button>
+          </div>
+          <div class="upgrade-item" data-cost="50" data-value="5">
+            <img
+              src="porridge.png"
+              alt="Полезновый каш"
+              class="item-image"
+            />
+            <!-- Изображение для Полезнового каш -->
+            <span>Полезновый каш (+5 coins/click)</span>
+            <button class="buy-btn">Buy (50 coins)</button>
+          </div>
+          <div class="upgrade-item" data-cost="100" data-value="10">
+            <img src="egg.jpg" alt="Яич" class="item-image" />
+            <!-- Изображение для Яич -->
+            <span>Яич (+10 coins/click)</span>
+            <button class="buy-btn">Buy (100 coins)</button>
+          </div>
+          <div class="upgrade-item" data-cost="1000" data-value="20">
+            <img
+              src="pizza.jpg"
+              alt="Пицц краденое"
+              class="item-image"
+            />
+            <!-- Изображение для Пицц краденое -->
+            <span>Пицц краденое (+20 coins/click)</span>
+            <button class="buy-btn">Buy (1000 coins)</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
