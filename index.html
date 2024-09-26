@@ -2,7 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+
     <title>Cat Coin Clicker</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -49,11 +53,7 @@
             <button class="buy-btn">Buy (10 coins)</button>
           </div>
           <div class="upgrade-item" data-cost="50" data-value="5">
-            <img
-              src="porridge.png"
-              alt="Полезновый каш"
-              class="item-image"
-            />
+            <img src="porridge.png" alt="Полезновый каш" class="item-image" />
             <!-- Изображение для Полезнового каш -->
             <span>Полезновый каш (+5 coins/click)</span>
             <button class="buy-btn">Buy (50 coins)</button>
@@ -65,16 +65,28 @@
             <button class="buy-btn">Buy (100 coins)</button>
           </div>
           <div class="upgrade-item" data-cost="1000" data-value="20">
-            <img
-              src="pizza.jpg"
-              alt="Пицц краденое"
-              class="item-image"
-            />
+            <img src="pizza.jpg" alt="Пицц краденое" class="item-image" />
             <!-- Изображение для Пицц краденое -->
             <span>Пицц краденое (+20 coins/click)</span>
             <button class="buy-btn">Buy (1000 coins)</button>
           </div>
         </div>
+      </div>
+    </div>
+    <!-- Модальное окно благодарности -->
+    <div class="thank-you-modal" id="thankYouModal">
+      <div class="thank-you-content">
+        <h2>Спасибо, котик сыт!</h2>
+        <img
+          src="cat_thanks.png"
+          alt="Счастливый котик"
+          class="thank-you-image"
+        />
+        <p>
+          Спасибо за ваши покупки! Котик теперь доволен и сыт. Продолжайте
+          играть и зарабатывать больше монет!
+        </p>
+        <button class="continue-btn" id="continueBtn">Продолжить играть</button>
       </div>
     </div>
 

@@ -217,3 +217,48 @@ nav {
     margin-right: 10px; /* Отступ справа от изображения */
     flex-shrink: 0; /* Предотвращает сжатие изображения */
 }
+
+/* Стили для модального окна благодарности */
+.thank-you-modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 2000; /* Поверх всех элементов */
+}
+
+.thank-you-content {
+    background-color: #1c1f26;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    max-width: 90%;
+    text-align: center;
+}
+
+.thank-you-image {
+    width: 100px; /* Ширина изображения котика */
+    height: auto; /* Авто-высота для сохранения пропорций */
+    margin: 15px 0; /* Отступы сверху и снизу */
+}
+
+.continue-btn {
+    background-color: #444;
+    border: none;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px; /* Отступ сверху */
+}
+
+.continue-btn:hover {
+    background-color: #555; /* Цвет при наведении */
+}

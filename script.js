@@ -66,8 +66,35 @@ upgradeItems.forEach(item => {
             scoreElement.textContent = score;
             updateCatImage(); // Обновляем изображение котика после покупки
             item.style.display = 'none'; // Скрываем купленный элемент
+
+            // Проверка, куплены ли все товары
+            const allPurchased = Array.from(upgradeItems).every(item => item.style.display === 'none');
+            if (allPurchased) {
+                showThankYouModal(); // Показываем модальное окно благодарности
+            }
         } else {
-            alert('Not enough coins!');
+            const errorMessage = document.createElement('div');
+            errorMessage.textContent = 'Недостаточно монет!';
+            errorMessage.className = 'error-message'; // Добавьте стиль для сообщения об ошибке
+            document.body.appendChild(errorMessage);
+
+            setTimeout(() => {
+                document.body.removeChild(errorMessage);
+            }, 2000); // Удаляем сообщение через 2 секунды
         }
     });
 });
+
+// Функция для показа модального окна благодарности
+function showThankYouModal() {
+    const thankYouModal = document.getElementById('thankYouModal');
+    thankYouModal.style.display = 'flex'; // Показываем модальное окно
+}
+
+// Обработчик для кнопки "Продолжить играть"
+const continueBtn = document.getElementById('continueBtn');
+continueBtn.addEventListener('click', () => {
+    const thankYouModal = document.getElementById('thankYouModal');
+    thankYouModal.style.display = 'none'; // Закрываем модальное окно
+});
+
